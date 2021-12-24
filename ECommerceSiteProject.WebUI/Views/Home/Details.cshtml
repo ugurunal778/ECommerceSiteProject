@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<div class="container pb-5">
+<div id="product-details" class="container pb-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="~/Upload/cart.png" class="img-fluid rounded w-100">
+            <img src="~/Upload/@Model.Image" class="img-fluid rounded w-100">
         </div>
         <div class="col-md-6">
             <div class="row">
@@ -17,7 +17,14 @@
             </div>
             <div class="row mt-1">
                 <div class="col-md-12">
-                    <span class="badge badge-primary">In Stock</span>
+                    @if (Model.IsApproved)
+                    {
+                        <span class="badge badge-primary">Stokta</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">Stokta Değil</span>
+                    }
                     <span class="product-number">#123123</span>
                 </div>
             </div>

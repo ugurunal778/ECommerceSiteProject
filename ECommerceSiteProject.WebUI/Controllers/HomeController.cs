@@ -33,7 +33,7 @@ namespace ECommerceSiteProject.WebUI.Controllers
         {
             return View(_context.Products.Where(i => i.Id==id).FirstOrDefault());
         }
-        public ActionResult List()
+        public ActionResult List(int? id)
         {
             var urunler = _context.Products
                 .Where(i => i.IsApproved)
@@ -46,8 +46,17 @@ namespace ECommerceSiteProject.WebUI.Controllers
                     Stock = i.Stock,
                     Image = i.Image ?? "cart.png",
                     CategoryId = i.CategoryId
-                }).ToList();
-            return View(urunler);
+                }).AsQueryable();
+            if (id != null)
+            {
+                urunler = urunler.Where(x => x.CategoryId == id);
+            }
+            return View(urunler.ToList());
+        }
+
+        public PartialViewResult GetCategories()
+        {
+            return PartialView(_context.Categories.ToList());
         }
     }
 }
