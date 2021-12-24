@@ -108,6 +108,7 @@
     <Content Include="Upload\2.jpg" />
     <Content Include="Upload\3.jpg" />
     <Content Include="Upload\4.jpg" />
+    <Content Include="Upload\cart.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

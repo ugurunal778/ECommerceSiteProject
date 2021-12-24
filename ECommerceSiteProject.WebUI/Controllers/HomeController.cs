@@ -24,7 +24,7 @@ namespace ECommerceSiteProject.WebUI.Controllers
                     Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
                     Price = i.Price,
                     Stock = i.Stock,
-                    Image = i.Image,
+                    Image = i.Image ?? "cart.png",
                     CategoryId = i.CategoryId
                 }).ToList();
             return View(urunler);
@@ -35,7 +35,19 @@ namespace ECommerceSiteProject.WebUI.Controllers
         }
         public ActionResult List()
         {
-            return View(_context.Products.Where(i => i.IsApproved).ToList());
+            var urunler = _context.Products
+                .Where(i => i.IsApproved)
+                .Select(i => new ProductModel()
+                {
+                    Id = i.Id,
+                    Name = i.Name.Length > 50 ? i.Name.Substring(0, 47) + "..." : i.Name,
+                    Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
+                    Price = i.Price,
+                    Stock = i.Stock,
+                    Image = i.Image ?? "cart.png",
+                    CategoryId = i.CategoryId
+                }).ToList();
+            return View(urunler);
         }
     }
 }
