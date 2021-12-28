@@ -56,7 +56,6 @@ namespace ECommerceSiteProject.WebUI.Controllers
                     ModelState.AddModelError("RegisterUserError", "Kullanıcı oluşturulamadı");
                 }
             }
-
             return View(model);
         }
 
@@ -66,7 +65,7 @@ namespace ECommerceSiteProject.WebUI.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Login model)
+        public ActionResult Login(Login model, string ReturnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -81,6 +80,11 @@ namespace ECommerceSiteProject.WebUI.Controllers
                     authProperties.IsPersistent = model.RememberMe;
                     authManager.SignIn(authProperties, identityClaims);
 
+                    if (String.IsNullOrEmpty(ReturnUrl))
+                    {
+                        Redirect(ReturnUrl);
+                    }
+
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -89,7 +93,6 @@ namespace ECommerceSiteProject.WebUI.Controllers
                     ModelState.AddModelError("LoginUserError", "Kullanıcı Girişi Yapılamadı");
                 }
             }
-
             return View(model);
         }
 

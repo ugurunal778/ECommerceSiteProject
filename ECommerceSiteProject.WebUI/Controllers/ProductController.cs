@@ -10,6 +10,7 @@ using ECommerceSiteProject.WebUI.Entity;
 
 namespace ECommerceSiteProject.WebUI.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductController : Controller
     {
         private DataContext db = new DataContext();

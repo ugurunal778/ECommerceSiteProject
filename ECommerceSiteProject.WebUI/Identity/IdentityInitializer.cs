@@ -47,8 +47,7 @@ namespace ECommerceSiteProject.WebUI.Identity
                     UserName = "ugur778",
                     Email = "ugur778@gmail.com"
                 };
-
-                manager.Create(user, "0000");
+                manager.Create(user, "1234567");
                 manager.AddToRole(user.Id, "admin");
                 manager.AddToRole(user.Id, "user");
             }
@@ -64,7 +63,7 @@ namespace ECommerceSiteProject.WebUI.Identity
                     Email = "fatma34@gmail.com"
                 };
 
-                manager.Create(user, "1234");
+                manager.Create(user, "1234567");
                 manager.AddToRole(user.Id, "user");
             }
             base.Seed(context);
