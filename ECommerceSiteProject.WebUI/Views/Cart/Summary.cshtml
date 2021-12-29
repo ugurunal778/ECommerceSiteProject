@@ -1,0 +1,15 @@
+﻿@model ECommerceSiteProject.WebUI.Models.Cart
+
+<style>
+    #cart
+    {
+        color: white;
+    }
+</style>
+
+<ul class="navbar-nav my-2 my-lg-0">
+    <li id="cart" class="nav-item">
+        <i class="fa fa-shopping-cart"></i>
+        (@Model.Cardlines.Count)
+    </li>
+</ul>
