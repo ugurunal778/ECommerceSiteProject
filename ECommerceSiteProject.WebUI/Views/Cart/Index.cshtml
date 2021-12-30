@@ -44,17 +44,27 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="5"></td>
+                            <td colspan="4"></td>
                             <td>@Model.Total().ToString("c")</td>
                         </tr>
                     </tfoot>
                 </table>
+                <div class="text-right">
+                    <a href="/Home/List" class="btn btn-primary">
+                        <i class="fa fa-angle-double-left"></i>
+                        Alışverişe Devam Et
+                    </a>
+                    <a href="/Cart/Checkout" class="btn btn-primary">
+                        <i class="fa fa-credit-card"></i>
+                        Alışverişi Tamamla
+                    </a>
+                </div>
             }
             else
             {
                 <div class="alert alert-danger" role="alert">
                     <i class="fa fa-exclamation-triangle"></i>
-                    <strong>Sepetinizde Ürün Bulunmamaktadır</strong> 
+                    <strong>Sepetinizde Ürün Bulunmamaktadır</strong>
                 </div>
             }
         </div>
