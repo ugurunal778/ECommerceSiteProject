@@ -1,2 +1,2 @@
 # ECommerceSiteProject
-Bu proje şu anda geliştirme aşamasındadır adım adım ilerledikçe update yapacağım
+OOP prensiplerine göre MVC ile hazırlanmış olan örnek E-Ticaret Sitesi
