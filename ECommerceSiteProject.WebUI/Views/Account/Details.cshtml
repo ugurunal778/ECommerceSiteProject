@@ -1,0 +1,79 @@
+﻿@model ECommerceSiteProject.WebUI.Models.OrderDetailsModel
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Sipariş Detayı</h2>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Order State</dt>
+                <dd class="col-sm-9">
+                    @if (Model.OrderState == ECommerceSiteProject.WebUI.Entity.EnumOrderState.Waiting)
+                    {
+                        <span class="badge-danger">Onay Bekleniyor</span>
+                    }
+                    else if (Model.OrderState == ECommerceSiteProject.WebUI.Entity.EnumOrderState.Completed)
+                    {
+                        <span class="badge-success">Sipariş Tamamlandı</span>
+                    }
+                </dd>
+                <dt class="col-sm-3">Order Id</dt>
+                <dd class="col-sm-9">@Model.OrderId</dd>
+                <dt class="col-sm-3">Order Number</dt>
+                <dd class="col-sm-9">@Model.OrderNumber</dd>
+                <dt class="col-sm-3">Total</dt>
+                <dd class="col-sm-9">
+                    <i class="fa fa-turkish-lira"></i>
+                    @Model.Total
+                </dd>
+                <dt class="col-sm-3">Order Date</dt>
+                <dd class="col-sm-9">@Model.OrderDate</dd>
+
+                <dt class="col-sm-3">Adress</dt>
+                <dd class="col-sm-9">
+                    @Model.AdresBasligi
+                    <hr />
+                    @Model.Adres
+                    <br />
+                    @Model.Sehir - @Model.Semt - @Model.Mahalle
+                    <br />
+                    @Model.PostaKodu
+                </dd>
+                <dt class="col-sm-3">Products</dt>
+                <dd class="col-sm-9">@Model.OrderDate</dd>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th style="width: 40%;">ProductName</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th style="width: 10%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderLines)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="/Upload/@item.Image" width="70">
+                                </td>
+                                <td>@item.ProductName</td>
+                                <td>@item.Quantity</td>
+                                <td>
+                                    <i class="fa fa-turkish-lira"></i>
+                                    @item.Price
+                                </td>
+                                <td>
+                                    <a href="/Home/Details/@item.ProductId" class="btn btn-primary btn-sm" target="_blank">Ürüne Git</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </dl>
+        </div>
+    </div>
+</div>
