@@ -12,5 +12,9 @@ namespace ECommerceSiteProject.WebUI.Identity
         {
 
         }
+
+        public System.Data.Entity.DbSet<ECommerceSiteProject.WebUI.Identity.ApplicationRole> IdentityRoles { get; set; }
+
+        public System.Data.Entity.DbSet<ECommerceSiteProject.WebUI.Identity.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

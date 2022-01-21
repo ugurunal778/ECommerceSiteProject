@@ -16,5 +16,6 @@ namespace ECommerceSiteProject.WebUI.Entity
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderLine> OrderLines { get; set; }
 
+        public System.Data.Entity.DbSet<ECommerceSiteProject.WebUI.Models.AdminmOrderModel> AdminmOrderModels { get; set; }
     }
 }

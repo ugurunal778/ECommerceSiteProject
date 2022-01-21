@@ -93,3 +93,9 @@ C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\
 C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\Newtonsoft.Json.xml
 C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Web.Http.dll
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Web.Http.xml
+C:\Users\ugur7\source\repos\ECommerceSiteProject\ECommerceSiteProject.WebUI\bin\System.Web.Http.WebHost.xml
