@@ -1,0 +1,2 @@
+C:\Users\ugur7\source\repos\ECommerceSiteProject\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ugur7\source\repos\ECommerceSiteProject\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
